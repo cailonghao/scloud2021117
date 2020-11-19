@@ -8,10 +8,10 @@
         <version>2.3.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.fish.server</groupId>
-    <artifactId>fish-server</artifactId>
+    <groupId>com.fish</groupId>
+    <artifactId>order</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>fish-server</name>
+    <name>order</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -22,7 +22,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

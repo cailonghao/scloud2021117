@@ -1,0 +1,10 @@
+server:
+  port: 30000
+eureka:
+  instance:
+    hostname: fish_order
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:20000/eureka/
