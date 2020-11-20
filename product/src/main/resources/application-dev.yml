@@ -2,7 +2,8 @@ server:
   port: 40000
 eureka:
   instance:
-    hostname: fish_product
+    hostname: ${spring.application.name}
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true

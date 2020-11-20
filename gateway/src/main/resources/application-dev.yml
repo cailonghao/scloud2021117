@@ -1,0 +1,36 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+        - id: service-order
+          uri: lb://fish-order
+          predicates:
+            - Path=/order/**
+          filters:
+            - StripPrefix=1
+        - id: service_product
+          uri: lb://fish-product
+          predicates:
+            - Path=/product/**
+          filters:
+            - StripPrefix=1
+        - id: baidu
+          uri: https://www.baidu.com
+          predicates:
+            - Path=/ask/**
+          filters:
+            - StripPrefix=2
+eureka:
+  instance:
+    hostname: ${spring.application.name}
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:20000/eureka/
+
