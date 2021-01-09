@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -50,5 +51,10 @@ public class WxController {
             throw new RestClientException("快电请求失败:{}", e);
         }
         return "";
+    }
+
+    public String getCallback(HttpServletRequest request){
+        String msgSignature = request.getParameter("signature");
+        String echostr =request.getParameter("echostr");
     }
 }
