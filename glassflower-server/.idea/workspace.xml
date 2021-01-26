@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5df55190-dcb5-430d-8fe1-ad9376b53387" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/glassflower/glassflowerserver/GlassflowerServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fish-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fish-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fish-server/src/test/java/com/fish/server/FishServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/glassflower/glassflowerserver/GlassflowerServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security1/src/main/java/com/fish/security/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../security1/src/main/java/com/fish/security/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security1/src/main/java/com/fish/security/filter/EmailFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../security1/src/main/java/com/fish/security/filter/EmailFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security1/src/main/java/com/fish/security/service/AuthDaoProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../security1/src/main/java/com/fish/security/service/AuthDaoProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../security1/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../security1/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\repository" />
+        <option name="userSettingsFile" value="G:\install\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1nKQ4UkrkdolcSAbkfHuDatFKtT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\springcloud\glassflower-server\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="GlassflowerServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="glassflower-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.glassflower.glassflowerserver.GlassflowerServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5df55190-dcb5-430d-8fe1-ad9376b53387" name="Default Changelist" comment="" />
+      <created>1611136260488</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611136260488</updated>
+      <workItem from="1611136261730" duration="511000" />
+      <workItem from="1611191569601" duration="95000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

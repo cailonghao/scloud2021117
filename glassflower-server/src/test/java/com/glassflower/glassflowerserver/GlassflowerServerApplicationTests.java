@@ -1,10 +1,10 @@
-package com.fish.server;
+package com.glassflower.glassflowerserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FishServerApplicationTests {
+class GlassflowerServerApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,12 +1,12 @@
 package com.fish.security.config;
 
 import com.fish.security.filter.EmailFilter;
-import com.fish.security.service.AuthDaoProvider;
-import com.fish.security.service.AuthUserDetailService;
+import com.fish.security.service.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.ObjectPostProcessor;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -19,11 +19,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.access.intercept.FilterSecurityInterceptor;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.*;
 import java.io.IOException;
 
 @Configuration
@@ -35,13 +37,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManager();
     }
 
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(new AuthDaoProvider());
+
     }
 
     @Override
     public void configure(WebSecurity web) throws Exception {
+
         super.configure(web);
     }
 
@@ -61,6 +66,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/index/noAuth").permitAll() //认证成功
                 .antMatchers("/index/needRoleUser").hasRole("USER")//需要拥有角色
                 .antMatchers("/index/needRoleAdmin").hasRole("ADMIN")//需要拥有角色
+                .withObjectPostProcessor(new MyObjectPostProcessor())
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling()
@@ -81,7 +87,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     }
                 })
                 .and()
-                .addFilterBefore(new EmailFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class)
+                .addFilterBefore(new EmailFilter(), UsernamePasswordAuthenticationFilter.class)
                 .csrf().disable()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.ALWAYS);//无状态
@@ -96,4 +102,24 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    @Bean
+    MyMetadataSource myMetadataSource(){
+        return new MyMetadataSource();
+    }
+
+    @Bean
+    MyAccessDecisionManager myAccessDecisionManager(){
+        return new MyAccessDecisionManager();
+    }
+
+    class MyObjectPostProcessor implements ObjectPostProcessor<FilterSecurityInterceptor> {
+        @Override
+        public <O extends FilterSecurityInterceptor> O postProcess(O o) {
+            o.setAccessDecisionManager(myAccessDecisionManager());
+            o.setSecurityMetadataSource(myMetadataSource());
+            return o;
+        }
+    }
+
 }

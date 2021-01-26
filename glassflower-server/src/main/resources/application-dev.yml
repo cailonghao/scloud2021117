@@ -1,0 +1,12 @@
+server:
+  port: 20000
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 90 #服务超时
+    lease-renewal-interval-in-seconds: 30 #心跳
+    hostname: fish_server
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
